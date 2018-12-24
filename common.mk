@@ -489,6 +489,9 @@ PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp:64 \
     libwfdaac_vendor:64
 
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink \
