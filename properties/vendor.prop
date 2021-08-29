@@ -33,6 +33,7 @@ vendor.audio.adm.buffering.ms=2
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.battery_listener.enable=true
+vendor.audio.feature.compr_voip.enable=true
 vendor.audio.feature.dmabuf.cma.memory.enable=true
 vendor.audio.feature.hfp.enable=true
 vendor.audio.feature.kpi_optimize.enable=true
@@ -49,6 +50,7 @@ vendor.audio.volume.headset.gain.depcal=true
 vendor.audio_hal.period_size=192
 vendor.qc2audio.per_frame.flac.dec.enabled=true
 vendor.qc2audio.suspend.enabled=true
+
 
 # Bluetooth
 bluetooth.hardware.power.idle_cur_ma=6
