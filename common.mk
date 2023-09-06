@@ -70,9 +70,6 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
-    agmcap \
-    agmcompressplay \
-    agmplay \
     audioadsprpcd
 
 PRODUCT_PACKAGES += \
