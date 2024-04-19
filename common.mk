@@ -510,6 +510,10 @@ PRODUCT_PACKAGES += \
     libshim_codec2 \
     libshim_hidlbase
 
+# System init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/bin/init.sim.restart.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/init.sim.restart.sh
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
