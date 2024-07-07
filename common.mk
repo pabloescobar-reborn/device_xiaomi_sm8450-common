@@ -263,6 +263,7 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libcodec2_soft_common.vendor \
     libsfplugin_ccodec_utils.vendor \
+    libcodec2_hidl_shim.vendor \
 
 # Network
 PRODUCT_COPY_FILES += \
