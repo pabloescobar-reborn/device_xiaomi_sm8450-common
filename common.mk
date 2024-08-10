@@ -479,7 +479,8 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libwfdaac_vendor:64
+    libwfdaac_vendor:64 \
+    vendor.qti.hardware.display.config-V5-ndk:64
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
