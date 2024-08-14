@@ -446,6 +446,9 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor
 
 PRODUCT_PACKAGES += \
+    sensors.xiaomi
+
+PRODUCT_PACKAGES += \
     sensor-notifier
 
 $(foreach sku, taro diwali cape ukee, \
