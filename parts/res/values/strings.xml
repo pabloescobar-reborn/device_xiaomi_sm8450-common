@@ -16,6 +16,9 @@
 -->
 <resources>
 
+    <!-- Xiaomi Settings -->
+    <string name="app_title">Xiaomi Settings</string>
+ 
     <!-- Thermal profiles -->
     <string name="thermal_title">Thermal profiles</string>
     <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>
