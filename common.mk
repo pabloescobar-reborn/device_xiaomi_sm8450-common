@@ -80,6 +80,7 @@ PRODUCT_PACKAGES += \
     libbatterylistener \
     libfmpal \
     libpalclient \
+    libprocessgroup.vendor \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
