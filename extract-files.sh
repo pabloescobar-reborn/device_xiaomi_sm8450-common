@@ -106,6 +106,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "setsockopt: 1" "${2}" || echo -e "\nsetsockopt: 1" >> "${2}"
             ;;    
+        system_ext/lib64/libwfdservice.so)
+            [ "$2" = "" ] && return 0
+            sed -i "s/android.media.audio.common.types-V2-cpp.so/android.media.audio.common.types-V3-cpp.so/" "${2}"
+            ;;        
         *)
             return 1
             ;;
