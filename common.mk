@@ -442,7 +442,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    sensors.xiaomi
+    sensors.xiaomi.v2
 
 PRODUCT_PACKAGES += \
     sensor-notifier
