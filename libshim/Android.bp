@@ -1,0 +1,16 @@
+//
+// Copyright (C) 2022-2023 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library {
+    name: "libshim_hidlbase",
+    srcs: [
+        "libhidlbase/gBnsConstructorMap.cpp",
+        "libhidlbase/Parcel.cpp",
+    ],
+    shared_libs: ["libhidlbase"],
+    compile_multilib: "both",
+    vendor: true,
+}

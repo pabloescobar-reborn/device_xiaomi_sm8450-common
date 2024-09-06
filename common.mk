@@ -479,6 +479,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_hidlbase
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
