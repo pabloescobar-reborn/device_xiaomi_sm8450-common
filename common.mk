@@ -472,7 +472,8 @@ PRODUCT_SOONG_NAMESPACES += \
 #Shims
 PRODUCT_PACKAGES += \
     libgui_shim \
-    libinput_shim
+    libinput_shim \
+    libshim_hidlbase
 
 # Telephony
 PRODUCT_PACKAGES += \
