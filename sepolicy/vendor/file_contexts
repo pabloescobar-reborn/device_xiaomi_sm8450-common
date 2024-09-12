@@ -11,6 +11,9 @@
 # Dolby
 /(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service u:object_r:hal_dms_default_exec:s0
 
+# Media
+/vendor/bin/hw/dolbycodec2                           u:object_r:mediacodec_exec:s0
+
 # Battery
 /(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
 
