@@ -559,6 +559,9 @@ PRODUCT_COPY_FILES += \
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30 31 32 33 34
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v34/arm64/arch-arm64-armv8-a/shared/vndk-core/libcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcrypto-v34.so \
+
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
