@@ -73,6 +73,9 @@ function blob_fixup() {
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             sed -ni '/dolby/!p' "${2}"
             ;;
+        vendor/lib/c2.dolby.client.so)
+            "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
+            ;;
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
