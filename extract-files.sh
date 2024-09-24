@@ -86,6 +86,9 @@ function blob_fixup() {
         [ "$2" = "" ] && return 0
             sed -ni '/dolby/!p' "${2}"
             ;;
+        vendor/lib/c2.dolby.client.so)
+            "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
+            ;;
         vendor/etc/msm_irqbalance.conf)
         [ "$2" = "" ] && return 0
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
