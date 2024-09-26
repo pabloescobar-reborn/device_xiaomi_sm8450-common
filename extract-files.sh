@@ -96,7 +96,7 @@ function blob_fixup() {
         vendor/lib64/libgrpc++_unsecure_prebuilt.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --set-soname "libgrpc++_unsecure_prebuilt.so" "${2}"
-            ;;
+            ;;    
         *)
             return 1
             ;;
