@@ -481,6 +481,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_codec2 \
     libshim_hidlbase
 
 # Telephony

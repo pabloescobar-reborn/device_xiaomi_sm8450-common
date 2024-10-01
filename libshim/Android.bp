@@ -14,3 +14,14 @@ cc_library {
     compile_multilib: "both",
     vendor: true,
 }
+
+cc_library_shared {
+    name: "libshim_codec2",
+    shared_libs: [
+        "libcodec2_vndk",
+    ],
+    srcs: [
+        "libcodec2/C2Fence.cpp",
+    ],
+    vendor: true,
+}
