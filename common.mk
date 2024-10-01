@@ -473,6 +473,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     libgui_shim \
     libinput_shim \
+    libshim_codec2 \
     libshim_hidlbase
 
 # Telephony
