@@ -90,6 +90,10 @@ function blob_fixup() {
         [ "$2" = "" ] && return 0
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
+        vendor/lib64/libqcodec2_core.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libshim_codec2.so" "${2}" || "${PATCHELF}" --add-needed "libshim_codec2.so" "${2}"
+            ;;
         vendor/lib64/vendor.libdpmframework.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --add-needed "libshim_hidlbase.so" "${2}"
