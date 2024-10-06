@@ -78,10 +78,6 @@ function blob_fixup() {
         [ "$2" = "" ] && return 0
             sed -i -n '/interface/!p' "${2}"
             ;;
-        vendor/etc/qcril_database/upgrade/config/6.0_config.sql)
-        [ "$2" = "" ] && return 0
-            sed -i '/persist.vendor.radio.redir_party_num/ s/true/false/g' "${2}"
-            ;;
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
         [ "$2" = "" ] && return 0
             sed -ni '/dolby/!p' "${2}"
