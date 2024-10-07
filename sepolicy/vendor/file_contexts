@@ -87,6 +87,9 @@
 /sys/devices/virtual/thermal/thermal_message/flash_state u:object_r:sys_thermal_flash_state:s0
 /sys/devices/virtual/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 
+# Vibrator
+/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi_sm8450                            u:object_r:hal_vibrator_default_exec:s0
+
 # Touchscreen
 /(vendor|system/vendor)/bin/touch_report u:object_r:touchreport_exec:s0
 /data/vendor/touch(/.*)? u:object_r:vendor_data_touchreport_file:s0
