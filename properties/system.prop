@@ -3,6 +3,7 @@ persist.vendor.cne.feature=1
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
+media.settings.xml=/vendor/etc/media_profiles_ukee.xml
 
 # QTI
 ro.vendor.qti.va_aosp.support=1
