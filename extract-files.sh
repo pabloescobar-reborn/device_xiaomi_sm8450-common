@@ -76,6 +76,37 @@ function blob_fixup() {
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
+        vendor/lib64/libqcodec2_core.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libshim_codec2.so" "${2}" || "${PATCHELF}" --add-needed "libshim_codec2.so" "${2}"
+            ;;
+        vendor/lib64/vendor.libdpmframework.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF_0_17_2}" --add-needed "libshim_hidlbase.so" "${2}"
+            ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            [ "$2" = "" ] && return 0
+            grep -q "gettid: 1" "${2}" || echo -e "\ngettid: 1" >> "${2}"
+            ;;  
+        vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy)
+            [ "$2" = "" ] && return 0
+            grep -q "setsockopt: 1" "${2}" || echo -e "\nsetsockopt: 1" >> "${2}"
+            ;;    
+        system_ext/lib64/libwfdservice.so)
+            [ "$2" = "" ] && return 0
+            sed -i "s/android.media.audio.common.types-V2-cpp.so/android.media.audio.common.types-V3-cpp.so/" "${2}"
+            ;;
+        system_ext/lib64/libwfdmmsrc_system.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+            ;;
+        system_ext/lib64/libwfdnative.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libinput_shim.so" "${2}" || "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
+            ;;            
+        *)
+            return 1
+            ;;
     esac
 }
 

@@ -468,6 +468,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
+    
+#Shims
+PRODUCT_PACKAGES += \
+    libgui_shim \
+    libinput_shim
 
 # Telephony
 PRODUCT_PACKAGES += \
