@@ -94,12 +94,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i '/dolby/d' "${2}"
             ;;
-<<<<<<< HEAD
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
-=======
->>>>>>> a0cf8f0 (sm8450-common: Use extract-utils FIX_SONAME helper)
         *)
             return 1
             ;;
