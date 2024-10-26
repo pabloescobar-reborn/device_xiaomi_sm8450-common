@@ -105,7 +105,11 @@ function blob_fixup() {
         vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy)
             [ "$2" = "" ] && return 0
             grep -q "setsockopt: 1" "${2}" || echo -e "\nsetsockopt: 1" >> "${2}"
-            ;;    
+            ;;
+        vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
+            [ "$2" = "" ] && return 0
+            grep -q "gettid: 1" "${2}" || echo -e "\ngettid: 1" >> "${2}"
+            ;;         
         system_ext/lib64/libwfdservice.so)
             [ "$2" = "" ] && return 0
             sed -i "s/android.media.audio.common.types-V2-cpp.so/android.media.audio.common.types-V3-cpp.so/" "${2}"
