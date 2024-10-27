@@ -144,10 +144,12 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
+    libcrypto_shim.vendor
+    
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
-
+    
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
