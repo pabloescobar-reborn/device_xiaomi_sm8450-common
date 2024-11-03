@@ -62,6 +62,9 @@ $(call soong_config_set, ufsbsg, ufsframework, bsg)
 TARGET_BOOTLOADER_BOARD_NAME := taro
 TARGET_NO_BOOTLOADER := true
 
+# Build broken rules
+BUILD_BROKEN_DUP_RULES := true
+
 # Camera
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
 
