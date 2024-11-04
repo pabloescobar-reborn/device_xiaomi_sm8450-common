@@ -42,6 +42,9 @@
     <!-- Specifies the maximum burn-in offset vertically. -->
     <integer name="config_burnInProtectionMaxVerticalOffset">40</integer>
 
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
     <!-- Low zone brightness thresholds in the range [0, 255] -->
     <integer-array name="config_brightnessThresholdsOfPeakRefreshRate" translatable="false">
         <item>7</item>
