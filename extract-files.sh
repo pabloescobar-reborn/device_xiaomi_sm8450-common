@@ -106,7 +106,7 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "setsockopt: 1" "${2}" || echo -e "\nsetsockopt: 1" >> "${2}"
             ;;
-        vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
+        vendor/etc/seccomp_policy/wfdhdcphalservice.policy | vendor/etc/seccomp_policy/modemManager.policy | vendor/etc/seccomp_policy/sensors-qesdk.policy)
             [ "$2" = "" ] && return 0
             grep -q "gettid: 1" "${2}" || echo -e "\ngettid: 1" >> "${2}"
             ;;         
