@@ -91,6 +91,9 @@ SOONG_CONFIG_dolby_vision_enabled := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
+# Fingerprint
+$(call soong_config_set, xiaomi_hardware_biometrics, run_32bit, false)
+
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 $(call soong_config_set, qtilocation, feature_nhz, false)
