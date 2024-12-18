@@ -34,6 +34,8 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #===============================================================================
 
+build_codename=`getprop vendor.media.system.build_codename`
+
 if [ -f /sys/devices/soc0/soc_id ]; then
     soc_hwid=`cat /sys/devices/soc0/soc_id` 2> /dev/null
 else
@@ -59,7 +61,9 @@ case "$target" in
         case "$soc_hwid" in
             568|602|581|582)
                 setprop vendor.media.target_variant "_ravelin"
-                setprop vendor.netflix.bsp_rev "Q4450-37037-1"
+                if [ $build_codename -le "13" ]; then
+                    setprop vendor.netflix.bsp_rev "Q4450-37037-1"
+                fi
                 ;;
             *)
                 setprop vendor.media.target_variant "_parrot_v2"
@@ -70,7 +74,9 @@ case "$target" in
                     setprop vendor.media.target_variant "_parrot_v1"
                 fi
 
-                setprop vendor.netflix.bsp_rev "Q6450-36256-1"
+                if [ $build_codename -le "14" ]; then
+                    setprop vendor.netflix.bsp_rev "Q6450-36256-1"
+                fi
                 ;;
         esac
         ;;
@@ -87,19 +93,27 @@ case "$target" in
                     setprop vendor.media.target_variant "_diwali_v1"
                 fi
 
-                setprop vendor.netflix.bsp_rev "Q7450-35705-1"
+                if [ $build_codename -le "14" ]; then
+                    setprop vendor.netflix.bsp_rev "Q7450-35705-1"
+                fi
                 ;;
             591)
                 setprop vendor.media.target_variant "_ukee"
-                setprop vendor.netflix.bsp_rev "Q8450-34634-1"
+                if [ $build_codename -le "14" ]; then
+                    setprop vendor.netflix.bsp_rev "Q8450-34634-1"
+                fi
                 ;;
             530|531|540)
                 setprop vendor.media.target_variant "_cape"
-                setprop vendor.netflix.bsp_rev "Q8450-34634-1"
+                if [ $build_codename -le "14" ]; then
+                    setprop vendor.netflix.bsp_rev "Q8450-34634-1"
+                fi
                 ;;
             *)
                 setprop vendor.media.target_variant "_taro"
-                setprop vendor.netflix.bsp_rev "Q8450-34634-1"
+                if [ $build_codename -le "14" ]; then
+                    setprop vendor.netflix.bsp_rev "Q8450-34634-1"
+                fi
                 ;;
         esac
         ;;
@@ -126,7 +140,9 @@ case "$target" in
         case "$soc_hwid" in
             518|561|585|586)
                 setprop vendor.media.target_variant "_khaje_v0"
-                setprop vendor.netflix.bsp_rev "Q6115-31409-1"
+                if [ $build_codename -le "13" ]; then
+                    setprop vendor.netflix.bsp_rev "Q6115-31409-1"
+                fi
                 ;;
         esac
         ;;
