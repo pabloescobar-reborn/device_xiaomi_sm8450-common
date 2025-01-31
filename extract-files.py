@@ -96,6 +96,13 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('.+dolby.+\n', ''),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
+    (
+        'vendor/lib64/libqcrilNr.so',
+        'vendor/lib64/libril-db.so',
+    ): blob_fixup().binary_regex_replace(
+        rb'persist\.vendor\.radio\.poweron_opt',
+        b'persist.vendor.radio.poweron_ign',
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
