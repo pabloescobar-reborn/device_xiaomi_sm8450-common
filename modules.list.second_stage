@@ -69,6 +69,7 @@ qcom_soc_wdt.ko
 sys_pm_vx.ko
 msm_ext_display.ko
 icnss2.ko
+binder_prio.ko
 plh_scmi.ko
 gplaf_scmi.ko
 shared_rail_scmi.ko
