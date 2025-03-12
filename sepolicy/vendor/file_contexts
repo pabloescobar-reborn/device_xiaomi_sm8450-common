@@ -87,3 +87,8 @@
 # Touchscreen
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
 /vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi u:object_r:hal_lineage_touch_default_exec:s0
+
+# Process and system statistics files
+/proc/stat u:object_r:proc_stat:s0
+/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage    u:object_r:vendor_sysfs_kgsl:s0
+/sys/class/kgsl/kgsl-3d0/temp                    u:object_r:vendor_sysfs_kgsl:s0
