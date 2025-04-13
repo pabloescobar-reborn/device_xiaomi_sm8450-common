@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.bluetooth.default:64 \
     audio.r_submix.default:64 \
-    audio.usbv2.default:64 \
+    audio.usb.default:64 \
     sound_trigger.primary.taro:64
 
 PRODUCT_PACKAGES += \
@@ -85,7 +85,6 @@ $(foreach sku, taro diwali cape ukee parrot, \
         $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_$(sku)/audio_effects.xml \
         $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_$(sku)/audio_policy_configuration.xml \
         $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_$(sku)/audio_io_policy.conf \
-        $(LOCAL_PATH)/audio/usbv2_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_$(sku)/usbv2_audio_policy_configuration.xml \
     ))
 
 PRODUCT_COPY_FILES += \
